@@ -41,3 +41,7 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
  * @since 1.0.0
  */
 HasanMiusage\Plugin_Main::get_instance();
+
+add_filter('template_include', function ($template) {
+	return is_page('sr-board') ? plugin_dir_path(__FILE__) . 'page-sr-board.php' : $template;
+});

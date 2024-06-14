@@ -43,6 +43,7 @@ final class Plugin_Main {
 		Vite::get_instance();
 		Admin_Page::get_instance();
 		AM_API_Block::get_instance();
+		Frontend::get_instance();
 	}
 
 	/**
