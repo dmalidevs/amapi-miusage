@@ -121,7 +121,7 @@ class Vite {
 		if ($this->is_dev_server_running()) {
 			if (is_admin()) {
 				wp_enqueue_script('amapi-admin-script', $this->dev_server . '/src/assets-src/js/admin.js', array('jquery'), self::get_data('Version'), true);
-			}else{
+			} else {
 				wp_enqueue_script('react-template-load-script', $this->dev_server . '/src/assets-src/js/front.js', array(), self::get_data('Version'), true);
 			}
 			add_filter('script_loader_tag', array($this, 'add_module_type_to_script'), 10, 3);
@@ -188,10 +188,11 @@ class Vite {
 	 * Enqueue JS assets.
 	 */
 	private function enqueue_js() {
-		wp_enqueue_script('jquery-ui-datepicker');
-		wp_enqueue_script('amapi-admin-script', AM_API_PLUGIN_URL . '/assets/dist/admin.js', array('jquery'), self::get_data('Version'), true);
 		if (!is_admin()) {
-			wp_enqueue_script('react-template-load-script', AM_API_PLUGIN_URL . 'assets/dist/front.js', array(), self::get_data('Version'), true);
+			wp_enqueue_script('react-template-load-script', AM_API_PLUGIN_URL . '/assets/dist/front.js', array(), self::get_data('Version'), true);
+		} else {
+			wp_enqueue_script('jquery-ui-datepicker');
+			wp_enqueue_script('amapi-admin-script', AM_API_PLUGIN_URL . '/assets/dist/admin.js', array('jquery'), self::get_data('Version'), true);
 		}
 	}
 }

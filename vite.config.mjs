@@ -1,12 +1,11 @@
 import { defineConfig } from "vite";
-import react from '@vitejs/plugin-react';
+import react from "@vitejs/plugin-react";
 
 // vite.config.js
 export default defineConfig({
 	server: {
 		port: 3030,
 	},
-	plugins: [react()],
 	build: {
 		manifest: true,
 		assetsDir: './img',
@@ -29,5 +28,5 @@ export default defineConfig({
 			},
 		},
 	},
-
+	plugins: [react()]
 })

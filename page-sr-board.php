@@ -20,19 +20,7 @@
 </head>
 
 <body <?php body_class() ?>>
-    <main id="render-board">
-        <?php
-            echo 'working';
-            /* if (is_user_logged_in()) {
-                $page_to_load = get_post(get_the_ID());
-                if ($page_to_load) {
-                    echo apply_filters('the_content', $page_to_load->post_content);
-                }
-            } else {
-                echo '<p>You are not logged in. <a href="' . esc_url(wp_login_url(home_url('/sr-board'))) . '">Click here to log in</a>.</p>';
-            } */
-        ?>
-    </main>
+    <div id="render-board"></div>
     <?php wp_footer() ?>
 </body>
 
