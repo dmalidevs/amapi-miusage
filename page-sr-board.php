@@ -17,6 +17,15 @@
             padding-bottom: 0;
         }
     </style>
+    <script type="module">
+        //https://vitejs.dev/guide/backend-integration#backend-integration
+        
+        import RefreshRuntime from 'http://localhost:3030/@react-refresh'
+        RefreshRuntime.injectIntoGlobalHook(window)
+        window.$RefreshReg$ = () => { }
+        window.$RefreshSig$ = () => (type) => type
+        window.__vite_plugin_react_preamble_installed__ = true
+    </script>
 </head>
 
 <body <?php body_class() ?>>

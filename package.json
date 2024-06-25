@@ -10,7 +10,6 @@
 		"devx": "concurrently \"vite\" \" npm run wpstart\" && npm run build",
 		"dev": "concurrently \"vite\" \" npm run wpstart\"",
 		"build": "concurrently \"vite build\" \" npm run wpbuild\"",
-		"watch": "concurrently \"vite build\" \" npm run wpbuild\"",
 		"dev-build": "vite build",
 		"preview": "vite preview",
 		"zip": "npm run build && node bundle.mjs",

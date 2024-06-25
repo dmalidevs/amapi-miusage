@@ -3,7 +3,7 @@ import React from 'react';
 function SettingsPage() {
     return (
         <div>
-            this is a settings page
+            this is a settings page new
         </div>
     )
 }
